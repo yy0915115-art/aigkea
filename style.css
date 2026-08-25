@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    background-color: #fafafa;
+    color: #262626;
+    font-family: Arial, "Noto Sans TC", sans-serif;
+}
+
+
+/* Instagram 上方 */
+
+.topbar {
+    width: 80%;
+    height: 60px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.instagram-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* 貼文 */
+
+.post {
+    width: 600px;
+    max-width: 100%;
+
+    margin: 30px auto;
+
+    background-color: white;
+
+    border: 1px solid #dbdbdb;
+}
+
+
+/* IKEA 帳號 */
+
+.post-header {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 15px;
+}
+
+.profile-picture {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    margin-right: 10px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.account-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.more {
+    margin-left: auto;
+    font-size: 24px;
+}
+
+
+/* 貼文圖片 */
+
+.post-image {
+    width: 100%;
+    background-color: white;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 按鈕 */
+
+.post-actions {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 14px 5px;
+}
+
+.left-actions {
+    display: flex;
+    gap: 14px;
+}
+
+.post-actions button {
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    font-size: 27px;
+}
+
+.save {
+    margin-left: auto;
+}
+
+
+/* 按讚 */
+
+.likes {
+    padding: 5px 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* 文案 */
+
+.caption {
+    padding: 5px 15px 10px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* 留言 */
+
+.comments {
+    padding: 0 15px 15px;
+
+    font-size: 14px;
+}
+
+.comment {
+    margin-top: 8px;
+
+    line-height: 1.5;
+}
+
+
+/* 留言輸入 */
+
+.comment-input {
+    border-top: 1px solid #efefef;
+
+    padding: 15px;
+
+    color: #8e8e8e;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        background-color: white;
+    }
+
+    .topbar {
+        height: 54px;
+        padding: 0 15px;
+    }
+
+    .instagram-logo {
+        font-size: 22px;
+    }
+
+    .post {
+        width: 100%;
+        margin: 0;
+
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .post-header {
+        height: 58px;
+        padding: 10px 12px;
+    }
+
+    .profile-picture {
+        width: 34px;
+        height: 34px;
+    }
+
+    .post-actions {
+        padding: 9px 12px 4px;
+    }
+
+    .post-actions button {
+        font-size: 25px;
+    }
+
+    .likes {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .caption {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .comments {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
