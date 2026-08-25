@@ -1,115 +1,122 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram 模擬頁面</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKEA Taiwan - Instagram 貼文模擬</title>
+  <!-- 引入 Tailwind CSS 方便快速排版 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入 Lucide 圖示庫 -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen p-4 font-sans">
 
-    <!-- 頂部導覽列 -->
-    <header class="navbar">
-        <div class="nav-container">
-            <h1 class="logo">Instagram</h1>
+  <!-- IG 貼文卡片主體 -->
+  <div class="max-w-md w-full bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+    
+    <!-- 1. 發文者 Header -->
+    <div class="flex items-center justify-between p-3 border-b border-gray-100">
+      <div class="flex items-center space-x-3">
+        <!-- 大頭貼 -->
+        <div class="w-9 h-9 rounded-full bg-yellow-400 border border-blue-600 flex items-center justify-center font-bold text-blue-700 text-xs tracking-tighter">
+          IKEA
         </div>
-    </header>
-
-    <main class="container">
-        <!-- IG 個人檔案頭部 -->
-        <section class="profile">
-            <div class="avatar-container">
-                <img src="https://picsum.photos/150/150?random=1" alt="ikea_taiwan 大頭貼" class="avatar">
-            </div>
-            <div class="profile-info">
-                <div class="profile-title">
-                    <h2>ikea_taiwan</h2>
-                    <button class="follow-btn">追蹤</button>
-                </div>
-                <ul class="profile-stats">
-                    <li><strong>1</strong> 貼文</li>
-                    <li><strong>1.2m</strong> 粉絲</li>
-                    <li><strong>15</strong> 追蹤中</li>
-                </ul>
-                <div class="profile-bio">
-                    <p class="bio-title">IKEA Taiwan</p>
-                    <p>給家更多可能 | 帶來美好日常家居設計 🇸🇪</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 貼文/分頁標籤 -->
-        <div class="tabs">
-            <div class="tab active">貼文</div>
+        <div>
+          <div class="flex items-center space-x-1">
+            <span class="font-semibold text-sm">ikea_taiwn</span>
+            <!-- 藍勾勾 -->
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500 fill-blue-500 text-white"></i>
+          </div>
+          <span class="text-xs text-gray-500">贊助內容</span>
         </div>
+      </div>
+      <i data-lucide="more-horizontal" class="w-5 h-5 text-gray-600 cursor-pointer"></i>
+    </div>
 
-        <!-- 貼文主體區塊 -->
-        <article class="post">
-            <!-- 貼文頂部作者 -->
-            <div class="post-header">
-                <img src="https://picsum.photos/150/150?random=1" alt="ikea_taiwan 大頭貼" class="post-avatar">
-                <span class="username">ikea_taiwan</span>
-            </div>
+    <!-- 2. 貼文圖片 -->
+    <div class="w-full bg-gray-200 aspect-square">
+      <!-- 可將 src 換成你自己的 IKEA 圖片連結 -->
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="IKEA 居家展示" class="w-full h-full object-cover">
+    </div>
 
-            <!-- 貼文圖片 -->
-            <div class="post-image">
-                <img src="https://picsum.photos/600/600?random=2" alt="貼文圖片">
-            </div>
+    <!-- 3. 按鈕互動區 -->
+    <div class="p-3 pb-1">
+      <div class="flex justify-between items-center mb-2">
+        <div class="flex items-center space-x-4">
+          <i data-lucide="heart" class="w-6 h-6 cursor-pointer hover:text-red-500 transition"></i>
+          <i data-lucide="message-circle" class="w-6 h-6 cursor-pointer hover:text-gray-600 transition"></i>
+          <i data-lucide="send" class="w-6 h-6 cursor-pointer hover:text-gray-600 transition"></i>
+        </div>
+        <i data-lucide="bookmark" class="w-6 h-6 cursor-pointer hover:text-gray-600 transition"></i>
+      </div>
+      <p class="font-semibold text-sm mb-2">1,248 次按讚</p>
+    </div>
 
-            <!-- 按鈕互動區 -->
-            <div class="post-actions">
-                <button id="like-btn" class="action-btn">🤍</button>
-                <button class="action-btn">💬</button>
-                <button class="action-btn">✈️</button>
-            </div>
+    <!-- 4. 貼文內文 -->
+    <div class="px-3 text-sm text-gray-800 leading-relaxed whitespace-pre-line">
+      <span class="font-semibold mr-2">ikea_taiwn</span>新年到了，是時候為家裡換上新的生活風格！
 
-            <!-- 讚數 -->
-            <div class="likes-count">
-                <span id="likes-text">1,482 次讚</span>
-            </div>
+✨ 簡約北歐設計 
+✨ 寶用居家用品 
+✨ 舒適生活空間 
+✨ 美好新年生活
 
-            <!-- 貼文文案 -->
-            <div class="post-caption">
-                <span class="username">ikea_taiwan</span>
-                <div class="caption-text">
-                    <p>新年到了，是時候為家裡換上新的生活風格！</p>
-                    <br>
-                    <p>✨ 簡約北歐設計</p>
-                    <p>✨ 寶用居家用品</p>
-                    <p>✨ 舒適生活空間</p>
-                    <p>✨ 美好新年生活</p>
-                    <br>
-                    <p>簡約的設計，讓生活更簡約；寶用的生活，讓居家更寶用；舒適的家，讓生活更加舒適。新年換新家，新家換新生活，新生活帶來新的美好，美好的新生活讓家變得更美好。</p>
-                    <br>
-                    <p>趁著過年季節出清，把喜歡的居家用品帶回家，讓家更整齊整齊，讓生活更舒適舒適，讓新年生活美好又美好。</p>
-                    <br>
-                    <p>IKEA，讓家更美好，讓生活更美好，讓家與生活一起美好。</p>
-                    <br>
-                    <p>📅活動期間：即日起至10/31</p>
-                    <p>數量有限，要買要快！！</p>
-                    <br>
-                    <p class="hashtags">#IKEA #過年出清 #新年換新家 #簡約生活 #居家生活 #寶用生活</p>
-                </div>
-            </div>
+簡約的設計，讓生活更簡約；寶用的生活，讓居家更寶用；舒適的家，讓生活更加舒適。新年換新家，新家換新生活，新生活帶來新的美好，美好的新生活讓家變得更美好。
 
-            <!-- 留言清單與輸入框 -->
-            <div class="comments-section">
-                <div id="comments-list" class="comments-list">
-                    <div class="comment-item">
-                        <span class="comment-user">user_01</span>
-                        <span>這檔出清太划算了吧！馬上來去逛大順店！</span>
-                    </div>
-                </div>
-                
-                <!-- 發布留言輸入框 -->
-                <div class="add-comment">
-                    <input type="text" id="comment-input" placeholder="留言......">
-                    <button id="submit-comment">發佈</button>
-                </div>
-            </div>
-        </article>
-    </main>
+趁著過年季節出清，把喜歡的居家用品帶回家，讓家更整齊整齊，讓生活更舒適舒適，讓新年生活美好又美好。
 
-    <script src="script.js"></script>
+IKEA，讓家更美好，讓生活更美好，讓家與生活一起美好。
+
+📅活動期間：即日起至10/31
+數量有限，要買要快！！
+
+<span class="text-blue-900 font-normal">#IKEA #過年出清 #新年換新家 #簡約生活 #居家生活 #寶用生活</span>
+    </div>
+
+    <!-- 發布時間 -->
+    <div class="px-3 mt-2 mb-3">
+      <span class="text-[10px] text-gray-400 uppercase tracking-wide">2 天前</span>
+    </div>
+
+    <!-- 5. 留言區 -->
+    <div class="border-t border-gray-100 p-3 bg-gray-50/50 space-y-3">
+      <p class="text-xs font-semibold text-gray-500 mb-2">留言 (2)</p>
+
+      <!-- 顧客留言 -->
+      <div class="flex items-start space-x-2 text-sm">
+        <div class="w-7 h-7 rounded-full bg-gray-300 flex-shrink-0 flex items-center justify-center text-xs text-gray-600 font-bold">
+          C
+        </div>
+        <div class="bg-white p-2.5 rounded-2xl border border-gray-100 flex-1 shadow-2xs">
+          <span class="font-semibold text-xs block text-gray-900 mb-0.5">👤 顧客</span>
+          <p class="text-gray-700 text-xs leading-normal">
+            小編～想問一下，這次過年出清是到幾號呀？我想週末再過去逛逛～
+          </p>
+        </div>
+      </div>
+
+      <!-- 小編回覆 -->
+      <div class="flex items-start space-x-2 text-sm pl-6">
+        <div class="w-7 h-7 rounded-full bg-yellow-400 border border-blue-600 flex-shrink-0 flex items-center justify-center text-[10px] font-bold text-blue-700">
+          IKEA
+        </div>
+        <div class="bg-blue-50/60 p-2.5 rounded-2xl border border-blue-100 flex-1 shadow-2xs">
+          <div class="flex items-center space-x-1 mb-0.5">
+            <span class="font-semibold text-xs text-gray-900">💙💛 IKEA 小編</span>
+            <i data-lucide="check-circle-2" class="w-3 h-3 text-blue-500 fill-blue-500 text-white"></i>
+          </div>
+          <p class="text-gray-700 text-xs leading-normal">
+            嗨～這次過年出清活動會到 2/15 喔！✨
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // 初始化 Lucide 圖示
+    lucide.createIcons();
+  </script>
 </body>
 </html>
