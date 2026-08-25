@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram 模擬頁面</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <header class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Instagram</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- IG 個人檔案頭部 -->
+        <section class="profile">
+            <div class="avatar-container">
+                <img src="https://picsum.photos/150/150?random=1" alt="ikea_taiwan 大頭貼" class="avatar">
+            </div>
+            <div class="profile-info">
+                <div class="profile-title">
+                    <h2>ikea_taiwan</h2>
+                    <button class="follow-btn">追蹤</button>
+                </div>
+                <ul class="profile-stats">
+                    <li><strong>1</strong> 貼文</li>
+                    <li><strong>1.2m</strong> 粉絲</li>
+                    <li><strong>15</strong> 追蹤中</li>
+                </ul>
+                <div class="profile-bio">
+                    <p class="bio-title">IKEA Taiwan</p>
+                    <p>給家更多可能 | 帶來美好日常家居設計 🇸🇪</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 貼文/分頁標籤 -->
+        <div class="tabs">
+            <div class="tab active">貼文</div>
+        </div>
+
+        <!-- 貼文主體區塊 -->
+        <article class="post">
+            <!-- 貼文頂部作者 -->
+            <div class="post-header">
+                <img src="https://picsum.photos/150/150?random=1" alt="ikea_taiwan 大頭貼" class="post-avatar">
+                <span class="username">ikea_taiwan</span>
+            </div>
+
+            <!-- 貼文圖片 -->
+            <div class="post-image">
+                <img src="https://picsum.photos/600/600?random=2" alt="貼文圖片">
+            </div>
+
+            <!-- 按鈕互動區 -->
+            <div class="post-actions">
+                <button id="like-btn" class="action-btn">🤍</button>
+                <button class="action-btn">💬</button>
+                <button class="action-btn">✈️</button>
+            </div>
+
+            <!-- 讚數 -->
+            <div class="likes-count">
+                <span id="likes-text">1,482 次讚</span>
+            </div>
+
+            <!-- 貼文文案 -->
+            <div class="post-caption">
+                <span class="username">ikea_taiwan</span>
+                <div class="caption-text">
+                    <p>新年到了，是時候為家裡換上新的生活風格！</p>
+                    <br>
+                    <p>✨ 簡約北歐設計</p>
+                    <p>✨ 寶用居家用品</p>
+                    <p>✨ 舒適生活空間</p>
+                    <p>✨ 美好新年生活</p>
+                    <br>
+                    <p>簡約的設計，讓生活更簡約；寶用的生活，讓居家更寶用；舒適的家，讓生活更加舒適。新年換新家，新家換新生活，新生活帶來新的美好，美好的新生活讓家變得更美好。</p>
+                    <br>
+                    <p>趁著過年季節出清，把喜歡的居家用品帶回家，讓家更整齊整齊，讓生活更舒適舒適，讓新年生活美好又美好。</p>
+                    <br>
+                    <p>IKEA，讓家更美好，讓生活更美好，讓家與生活一起美好。</p>
+                    <br>
+                    <p>📅活動期間：即日起至10/31</p>
+                    <p>數量有限，要買要快！！</p>
+                    <br>
+                    <p class="hashtags">#IKEA #過年出清 #新年換新家 #簡約生活 #居家生活 #寶用生活</p>
+                </div>
+            </div>
+
+            <!-- 留言清單與輸入框 -->
+            <div class="comments-section">
+                <div id="comments-list" class="comments-list">
+                    <div class="comment-item">
+                        <span class="comment-user">user_01</span>
+                        <span>這檔出清太划算了吧！馬上來去逛大順店！</span>
+                    </div>
+                </div>
+                
+                <!-- 發布留言輸入框 -->
+                <div class="add-comment">
+                    <input type="text" id="comment-input" placeholder="留言......">
+                    <button id="submit-comment">發佈</button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
