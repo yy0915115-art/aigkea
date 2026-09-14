@@ -140,6 +140,24 @@ body {
 .save {
     margin-left: auto;
 }
+.repost-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.repost-btn svg {
+    width: 24px;
+    height: 24px;
+    color: #262626;
+}
 
 
 /* 按讚 */
