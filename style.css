@@ -179,6 +179,44 @@ body {
 
     line-height: 1.5;
 }
+.comment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.comment-content {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.comment-time {
+    font-size: 11px;
+    color: #8e8e8e;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+.comment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.comment-content {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.comment-time {
+    font-size: 11px;
+    color: #8e8e8e;
+    white-space: nowrap;
+    margin-top: 2px;
+}
 
 
 /* 留言輸入 */
