@@ -186,55 +186,33 @@ body {
 
 /* 留言 */
 
-.comments {
-    padding: 0 15px 15px;
+.comment {
+    margin-bottom: 20px;
+}
 
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.comment-header strong {
+    font-weight: 600;
+    color: #262626;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.comment-text {
     font-size: 14px;
+    line-height: 1.6;
+    color: #262626;
 }
 
-.comment {
-    margin-top: 8px;
-
-    line-height: 1.5;
-}
-.comment {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.comment-content {
-    flex: 1;
-    line-height: 1.5;
-}
-
-.comment-time {
-    font-size: 11px;
-    color: #8e8e8e;
-    white-space: nowrap;
-    margin-top: 2px;
-}
-.comment {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.comment-content {
-    flex: 1;
-    line-height: 1.5;
-}
-
-.comment-time {
-    font-size: 11px;
-    color: #8e8e8e;
-    white-space: nowrap;
-    margin-top: 2px;
-}
 
 
 /* 留言輸入 */
