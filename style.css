@@ -1,3 +1,4 @@
+```css
 body {
     margin: 0;
     background-color: #fafafa;
@@ -6,7 +7,9 @@ body {
 }
 
 
-/* Instagram 上方 */
+/* =========================
+   Instagram 上方導覽列
+========================= */
 
 .topbar {
     width: 100%;
@@ -14,7 +17,6 @@ body {
     height: 60px;
 
     background-color: white;
-
     border-bottom: 1px solid #dbdbdb;
 
     display: flex;
@@ -29,7 +31,9 @@ body {
 }
 
 
-/* 貼文 */
+/* =========================
+   貼文
+========================= */
 
 .post {
     width: 600px;
@@ -38,12 +42,13 @@ body {
     margin: 30px auto;
 
     background-color: white;
-
     border: 1px solid #dbdbdb;
 }
 
 
-/* IKEA 帳號資訊區 */
+/* =========================
+   IKEA 帳號資訊
+========================= */
 
 .post-header {
     height: 60px;
@@ -55,7 +60,9 @@ body {
     box-sizing: border-box;
 }
 
+
 /* 圓形白底頭貼外框 */
+
 .profile-picture {
     width: 38px;
     height: 38px;
@@ -95,7 +102,9 @@ body {
 }
 
 
-/* 貼文圖片 */
+/* =========================
+   貼文圖片
+========================= */
 
 .post-image {
     width: 100%;
@@ -109,11 +118,12 @@ body {
 }
 
 
-/* 按鈕 */
+/* =========================
+   貼文操作按鈕
+========================= */
 
 .post-actions {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
@@ -122,100 +132,174 @@ body {
 
 .left-actions {
     display: flex;
-    gap: 14px;
+    align-items: center;
+    gap: 16px;
 }
 
 .post-actions button {
+    background: none;
     border: none;
 
-    background: none;
-
     padding: 0;
-
-    font-size: 27px;
+    margin: 0;
 
     cursor: pointer;
+    color: #262626;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-actions button svg {
+    display: block;
 }
 
 .save {
     margin-left: auto;
 }
+
+
+/* 分享／雙箭頭 */
+
 .repost-btn {
     background: none;
     border: none;
+
     padding: 0;
     margin: 0;
-    width: 24px;
-    height: 24px;
+
+    width: 27px;
+    height: 27px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
 }
 
 .repost-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 27px;
+    height: 27px;
     color: #262626;
 }
 
 
-/* 按讚 */
+/* =========================
+   按讚數
+========================= */
 
 .likes {
     padding: 5px 15px;
 
     font-size: 14px;
-
     font-weight: bold;
 }
 
 
-/* 文案 */
+/* =========================
+   貼文文字
+========================= */
 
 .caption {
     padding: 5px 15px 10px;
 
     font-size: 14px;
-
     line-height: 1.6;
 
     word-break: break-word;
 }
 
 
-/* 留言 */
+/* =========================
+   留言區
+========================= */
+
+.comments {
+    padding: 0 16px;
+}
 
 .comment {
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 18px;
 }
+
+
+/* 第一行：
+   帳號名稱＋時間＋最右側愛心 */
 
 .comment-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
+
+    width: 100%;
 }
 
-.comment-header strong {
+
+/* 帳號名稱＋時間 */
+
+.comment-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-user strong {
+    font-size: 14px;
     font-weight: 600;
     color: #262626;
 }
 
+
+/* 時間 */
+
 .comment-time {
     font-size: 12px;
     color: #8e8e8e;
+
+    white-space: nowrap;
 }
+
+
+/* 留言右側愛心 */
+
+.comment-like {
+    border: none;
+    background: transparent;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 1;
+
+    color: #262626;
+
+    cursor: pointer;
+}
+
+
+/* 第二行留言內容 */
 
 .comment-text {
+    margin-top: 4px;
+
+    padding-right: 28px;
+
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.5;
+
     color: #262626;
+
+    word-break: break-word;
 }
 
 
-
-/* 留言輸入 */
+/* =========================
+   留言輸入
+========================= */
 
 .comment-input {
     border-top: 1px solid #efefef;
@@ -229,7 +313,7 @@ body {
 
 
 /* =========================
-    手機版響應式設定
+   手機版響應式設定
 ========================= */
 
 @media (max-width: 600px) {
@@ -237,6 +321,9 @@ body {
     body {
         background-color: white;
     }
+
+
+    /* 上方導覽列 */
 
     .topbar {
         height: 54px;
@@ -247,6 +334,9 @@ body {
         font-size: 22px;
     }
 
+
+    /* 貼文 */
+
     .post {
         width: 100%;
         margin: 0;
@@ -255,6 +345,9 @@ body {
         border-right: none;
         border-top: none;
     }
+
+
+    /* 帳號資訊 */
 
     .post-header {
         height: 58px;
@@ -267,118 +360,51 @@ body {
         padding: 2px;
     }
 
+
+    /* 操作按鈕 */
+
     .post-actions {
         padding: 9px 12px 4px;
     }
 
-    .post-actions button {
-        font-size: 25px;
+    .left-actions {
+        gap: 14px;
     }
+
+
+    /* 按讚數 */
 
     .likes {
         padding-left: 12px;
         padding-right: 12px;
     }
 
+
+    /* 貼文文字 */
+
     .caption {
         padding-left: 12px;
         padding-right: 12px;
     }
 
+
+    /* 留言區 */
+
     .comments {
         padding-left: 12px;
         padding-right: 12px;
     }
-  ```css
-/* =========================
-   留言區
-========================= */
 
-.comments {
-    padding: 0 16px;
-}
+    .comment {
+        margin-bottom: 18px;
+    }
 
-.comment {
-    margin-bottom: 18px;
-}
+    .comment-text {
+        padding-right: 24px;
+    }
 
-/* 第一行：帳號＋時間＋愛心 */
-.comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.comment-user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.comment-user strong {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.comment-time {
-    font-size: 12px;
-    color: #8e8e8e;
-}
-
-/* 最右側愛心 */
-.comment-like {
-    border: none;
-    background: none;
-    padding: 0;
-    font-size: 18px;
-    color: #262626;
-    cursor: pointer;
-}
-
-/* 第二行留言內容 */
-.comment-text {
-    margin-top: 4px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #262626;
-    padding-right: 25px;
+    .comment-like {
+        font-size: 19px;
+    }
 }
 ```
-
-
-
-/* =========================
-   貼文按鈕
-========================= */
-
-.post-actions button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    color: #262626;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.post-actions button svg {
-    display: block;
-}
-
-.left-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-
-/* 讓雙箭頭稍微大一點，
-   視覺上跟 IG 其他圖示一致 */
-.repost-button svg {
-    width: 27px;
-    height: 27px;
-}
