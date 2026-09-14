@@ -311,4 +311,75 @@ body {
         padding-left: 12px;
         padding-right: 12px;
     }
+    /* =========================
+   留言時間與愛心
+========================= */
+
+.comment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.comment-content {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.comment-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.comment-time {
+    font-size: 11px;
+    color: #8e8e8e;
+    white-space: nowrap;
+}
+
+.comment-heart {
+    font-size: 20px;
+    line-height: 1;
+    color: #262626;
+}
+
+
+/* =========================
+   貼文按鈕
+========================= */
+
+.post-actions button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #262626;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-actions button svg {
+    display: block;
+}
+
+.left-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* 讓雙箭頭稍微大一點，
+   視覺上跟 IG 其他圖示一致 */
+.repost-button svg {
+    width: 27px;
+    height: 27px;
 }
