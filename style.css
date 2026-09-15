@@ -129,11 +129,25 @@ body {
     padding: 10px 14px 5px;
 }
 
+
+/* 圖示＋數字 */
+
 .left-actions {
     display: flex;
     align-items: center;
     gap: 16px;
 }
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    height: 27px;
+}
+
+
+/* 操作按鈕 */
 
 .post-actions button {
     background: none;
@@ -154,12 +168,35 @@ body {
     display: block;
 }
 
+
+/* =========================
+   愛心／留言／轉發數字
+========================= */
+
+.action-count {
+    font-size: 13px;
+    color: #262626;
+    line-height: 24px;
+
+    white-space: nowrap;
+
+    /* 數字加粗 */
+    font-weight: 600;
+}
+
+
+/* =========================
+   儲存
+========================= */
+
 .save {
     margin-left: auto;
 }
 
 
-/* 分享／雙箭頭 */
+/* =========================
+   分享／雙箭頭
+========================= */
 
 .repost-btn {
     background: none;
@@ -182,18 +219,6 @@ body {
     width: 27px;
     height: 27px;
     color: #262626;
-}
-
-
-/* =========================
-   按讚數
-========================= */
-
-.likes {
-    padding: 5px 15px;
-
-    font-size: 14px;
-    font-weight: bold;
 }
 
 
@@ -297,6 +322,21 @@ body {
 
 
 /* =========================
+   日期
+========================= */
+
+.post-date {
+    padding: 0 15px 10px;
+
+    color: #8e8e8e;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
    留言輸入
 ========================= */
 
@@ -371,6 +411,13 @@ body {
     }
 
 
+    /* 圖示＋數字 */
+
+    .action-item {
+        gap: 4px;
+    }
+
+
     /* 按讚數 */
 
     .likes {
@@ -405,11 +452,12 @@ body {
     .comment-like {
         font-size: 19px;
     }
-}
-action-count {
-    font-size: 13px;
-    color: #262626;
-    line-height: 24px;
-    white-space: nowrap;
-    font-weight: 600;
+
+
+    /* 日期 */
+
+    .post-date {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 }
